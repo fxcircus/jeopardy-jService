@@ -6,13 +6,10 @@ import Question from "./Question"
 
 export default function App() {
     const [score, setScore] = useState(0)
-    const [category, setCategory] = useState('')
-    const [points, setPoints] = useState(0)
-    const [answer, setAnswer] = useState('')
-
+    
 
     return (
-        <html>
+        <div>
 
             <Header/>
 
@@ -26,10 +23,8 @@ export default function App() {
                 </div>
 
                 <h1>Let's play!</h1>
-                <Button text="Get Question"/>
-                <Question></Question>
-                <Button text="click to Reveal Question"/>
+                <Question />
             </main>
-        </html>
+        </div>
     )
 }
