@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Button from "./Button"
 
-export default function Question(props) {
+export default function Question( props) {
     const [category, setCategory] = useState("")
     const [points, setPoints] = useState(0)
     const [answer, setAnswer] = useState('')
@@ -17,6 +17,8 @@ export default function Question(props) {
             setPoints(data[0].value)
             setAnswer(data[0].answer)
             setQuestion(data[0].question)
+            // setQScore(data[0].value)
+            props.loadScore(data[0].value)
             setReveal(false)
         } catch(e){
             console.error(e)

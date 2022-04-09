@@ -6,12 +6,17 @@ import Question from "./Question"
 
 export default function App() {
     const [score, setScore] = useState(0)
-    
+    const [qScore, setQScore] = useState(0)
+
+    const loadScore = (num) => {
+        setQScore(num)
+    }
+
     const scoreChange = (what) =>{
         if (what === 'reset') {
             setScore(0)
         } else {
-            what === 'increase' ? setScore(score + 100) : setScore (score - 100)
+            what === 'increase' ? setScore(score + qScore) : setScore (score - qScore)
         }
     }
 
@@ -30,7 +35,7 @@ export default function App() {
                 </div>
 
                 <h3>Let's play!</h3>
-                <Question />
+                <Question loadScore={loadScore} />
             </main>
         </div>
     )
