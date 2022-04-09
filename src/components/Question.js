@@ -7,7 +7,7 @@ export default function Question( props) {
     const [answer, setAnswer] = useState('')
     const [question, setQuestion] = useState('')
     const [reveal, setReveal] = useState(false)
-    const url = `http://jservice.io/api/random`
+    const url = `https://jservice.io/api/random`
 
     const getQuestion = async () => {
         try {
