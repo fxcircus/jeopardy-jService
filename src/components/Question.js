@@ -30,13 +30,15 @@ export default function Question(props) {
     return (
         <div>
             <button onClick={(e) => getQuestion()}>Get Question</button>
-            <h2>Category:<br/>{category}</h2>
-            <h3>Points:<br/>{points}</h3>
-            <h3>Answer:<br/>{answer}</h3>
-            <button onClick={(e) => setReveal(!reveal)}>click to Reveal Question</button>
-            <div>
+            <div className="med">
+                <div className="border">Category<br/><div className="small">{category}</div></div>
+                <div className="border">Points<br/><div className="small">{points}</div></div>
+                <div className="border">Answer<br/><div className="small">{answer}</div></div>
+            </div>
+            <button onClick={(e) => setReveal(!reveal)}>Click to reveal question</button>
+            <div class="extra">
                 {
-                    reveal ? question : ""
+                    reveal ? <div className="border small">{question}</div> : ""
                 }
             </div>
         </div>

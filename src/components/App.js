@@ -20,7 +20,7 @@ export default function App() {
 
             <Header/>
 
-            <main>
+            <main className="border">
                 <Score score ={score}/>
 
                 <div className="button-area">
@@ -29,7 +29,7 @@ export default function App() {
                     <button onClick={(e) => scoreChange('reset')}>Reset</button>
                 </div>
 
-                <h1>Let's play!</h1>
+                <h3>Let's play!</h3>
                 <Question />
             </main>
         </div>

@@ -6,8 +6,6 @@ import './style.css'
 
 ReactDOM.render(
     <StrictMode>
-        <Router>
-            <App/>
-        </Router>
+        <App />
     </StrictMode>, document.getElementById('root')
 )
